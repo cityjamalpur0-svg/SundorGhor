@@ -1,181 +1,198 @@
-export default function CasaGlowWebsite() { const products = [ { name: "Luxury Vase", price: "৳1,250", image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop", }, { name: "Modern Wall Clock", price: "৳1,850", image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop", }, { name: "Minimal Lamp", price: "৳2,450", image: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1200&auto=format&fit=crop", }, { name: "Decor Cushion", price: "৳950", image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop", }, ];
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SundorGhor - Premium Home Decor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans antialiased">
 
-return ( <div className="bg-white text-gray-900 min-h-screen font-sans"> {/* Navbar */} <header className="flex items-center justify-between px-8 py-5 shadow-sm sticky top-0 bg-white z-50"> <h1 className="text-3xl font-bold tracking-wide">CasaGlow</h1>
-
-<nav className="hidden md:flex gap-8 text-sm font-medium">
-      <a href="#home" className="hover:text-yellow-600">Home</a>
-      <a href="#shop" className="hover:text-yellow-600">Shop</a>
-      <a href="#about" className="hover:text-yellow-600">About</a>
-      <a href="#contact" className="hover:text-yellow-600">Contact</a>
-    </nav>
-
-    <button className="bg-black text-white px-5 py-2 rounded-xl hover:opacity-90">
-      Cart
-    </button>
-  </header>
-
-  {/* Hero Section */}
-  <section
-    id="home"
-    className="relative h-[85vh] flex items-center justify-center text-center bg-cover bg-center"
-    style={{
-      backgroundImage:
-        "url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600&auto=format&fit=crop')",
-    }}
-  >
-    <div className="absolute inset-0 bg-black/50"></div>
-
-    <div className="relative z-10 text-white max-w-3xl px-4">
-      <h2 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
-        Style Your Dream Home
-      </h2>
-
-      <p className="text-lg md:text-xl mb-8 text-gray-200">
-        Premium home decor collections designed to make your space elegant and modern.
-      </p>
-
-      <div className="flex gap-4 justify-center flex-wrap">
-        <button className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-8 py-3 rounded-2xl">
-          Shop Now
-        </button>
-
-        <button className="border border-white px-8 py-3 rounded-2xl hover:bg-white hover:text-black transition">
-          Explore Collection
-        </button>
-      </div>
+    <div class="bg-black text-white text-center py-2 text-xs font-semibold tracking-wide">
+        🎉 সীমিত সময়ের অফার! প্রথম অর্ডারে ১০% ছাড়। কোড: <span class="text-yellow-400">SUNDOR10</span>
     </div>
-  </section>
 
-  {/* Categories */}
-  <section className="py-20 px-8 bg-gray-50">
-    <div className="max-w-7xl mx-auto">
-      <h3 className="text-4xl font-bold text-center mb-12">
-        Featured Categories
-      </h3>
-
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-        {[
-          "Wall Decor",
-          "Lighting",
-          "Luxury Vase",
-          "Mirror",
-          "Office Decor",
-          "Artificial Plant",
-          "Bedroom Decor",
-          "Table Decor",
-        ].map((item) => (
-          <div
-            key={item}
-            className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition text-center font-semibold"
-          >
-            {item}
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  {/* Products */}
-  <section id="shop" className="py-20 px-8">
-    <div className="max-w-7xl mx-auto">
-      <div className="flex items-center justify-between mb-10 flex-wrap gap-4">
-        <h3 className="text-4xl font-bold">Trending Products</h3>
-
-        <button className="border px-5 py-2 rounded-xl hover:bg-black hover:text-white transition">
-          View All
-        </button>
-      </div>
-
-      <div className="grid md:grid-cols-4 gap-8">
-        {products.map((product) => (
-          <div
-            key={product.name}
-            className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition"
-          >
-            <img
-              src={product.image}
-              alt={product.name}
-              className="h-72 w-full object-cover"
-            />
-
-            <div className="p-5">
-              <h4 className="text-xl font-semibold mb-2">
-                {product.name}
-              </h4>
-
-              <p className="text-yellow-600 font-bold text-lg mb-4">
-                {product.price}
-              </p>
-
-              <button className="w-full bg-black text-white py-3 rounded-2xl hover:opacity-90">
-                Add to Cart
-              </button>
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md px-6 py-4 border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="#" class="text-2xl font-black tracking-widest text-black">SUNDOR<span class="text-yellow-600">GHOR</span></a>
+            <nav class="hidden md:flex gap-8 text-sm font-semibold tracking-wide">
+                <a href="#home" class="text-gray-800 hover:text-yellow-600 transition">Home</a>
+                <a href="#categories" class="text-gray-800 hover:text-yellow-600 transition">Categories</a>
+                <a href="#shop" class="text-gray-800 hover:text-yellow-600 transition">New Arrivals</a>
+                <a href="#reviews" class="text-gray-800 hover:text-yellow-600 transition">Reviews</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <button class="text-gray-700 hover:text-yellow-600 text-lg relative">
+                    <i class="far fa-heart"></i>
+                </button>
+                <button class="bg-black text-white px-5 py-2.5 rounded-xl hover:bg-gray-800 transition flex items-center gap-2 shadow-md text-sm font-medium">
+                    <i class="fas fa-shopping-bag"></i> <span>Cart (0)</span>
+                </button>
             </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
+        </div>
+    </header>
 
-  {/* Offer Banner */}
-  <section className="py-16 px-8 bg-black text-white text-center">
-    <h3 className="text-4xl font-bold mb-4">
-      Free Delivery Over ৳2000
-    </h3>
+    <section id="home" class="relative h-[85vh] flex items-center justify-center text-center bg-cover bg-center text-white" style="background-image: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1600&auto=format&fit=crop');">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-black/40"></div>
+        <div class="relative z-10 max-w-3xl px-6">
+            <span class="text-xs font-bold tracking-widest text-yellow-500 uppercase bg-yellow-500/10 px-3 py-1.5 rounded-full backdrop-blur-sm">Exclusive Collection 2026</span>
+            <h1 class="text-5xl md:text-7xl font-black leading-tight mt-4 mb-6">Elevate Your Living Space</h1>
+            <p class="text-lg md:text-xl mb-8 text-gray-200 font-light">আপনার ঘরকে আরও আকর্ষণীয় ও আধুনিক রূপ দিতে আমাদের প্রিমিয়াম হোম ডেকর কালেকশন এক্সপ্লোর করুন।</p>
+            <div class="flex gap-4 justify-center flex-wrap">
+                <a href="#shop" class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-8 py-3.5 rounded-xl transition shadow-lg hover:scale-105 transform duration-200">Shop Collection</a>
+                <a href="#categories" class="border-2 border-white/80 px-8 py-3.5 rounded-xl hover:bg-white hover:text-black font-semibold transition backdrop-blur-sm">Categories</a>
+            </div>
+        </div>
+    </section>
 
-    <p className="text-gray-300 text-lg mb-6">
-      Decorate your home with premium quality products.
-    </p>
+    <section id="categories" class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Shop by Category</h2>
+                <p class="text-gray-500 mt-2">আপনার পছন্দের ক্যাটাগরি বেছে নিন</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="categories-container">
+                </div>
+        </div>
+    </section>
 
-    <button className="bg-yellow-500 text-black px-8 py-3 rounded-2xl font-semibold hover:bg-yellow-600">
-      Shop Collection
-    </button>
-  </section>
+    <section id="shop" class="py-20 px-6 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Premium New Arrivals</h2>
+                    <p class="text-gray-500 mt-2">আমাদের সেরা এবং নতুন প্রোডাক্টের কালেকশন</p>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <span class="text-sm font-semibold text-yellow-600 border-b-2 border-yellow-600 pb-1 cursor-pointer">View All Products &rarr;</span>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="products-container">
+                </div>
+        </div>
+    </section>
 
-  {/* About */}
-  <section id="about" className="py-20 px-8 bg-gray-50">
-    <div className="max-w-5xl mx-auto text-center">
-      <h3 className="text-4xl font-bold mb-6">About CasaGlow</h3>
+    <section id="reviews" class="py-20 px-6 bg-gray-50 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold">What Our Customers Say</h2>
+                <p class="text-gray-500 mt-2">আমাদের কাস্টমারদের মূল্যবান মতামত</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <div class="text-yellow-500 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-600 italic">"ভেসটির কোয়ালিটি অসাধারণ ছিল! প্যাকেজিংও খুব ভালো ছিল। সুন্দরের ঘরের প্রোডাক্টগুলো সত্যি প্রিমিয়াম।"</p>
+                    <h4 class="font-bold mt-4 text-gray-900">— আসিফ রহমান</h4>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <div class="text-yellow-500 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-600 italic">"লাইটটা আমার ড্রয়িং রুমের লুক পুরো চেঞ্জ করে দিয়েছে। ডেলিভারি খুব ফাস্ট পেয়েছি।"</p>
+                    <h4 class="font-bold mt-4 text-gray-900">— নুসরাত জাহান</h4>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <div class="text-yellow-500 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                    <p class="text-gray-600 italic">"প্রিমিয়াম ওয়াল আর্টটি দেয়ালে লাগানোর পর সবাই প্রশংসা করছে। খুব দারুণ কালেকশন।"</p>
+                    <h4 class="font-bold mt-4 text-gray-900">— তানভীর আহমেদ</h4>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <p className="text-lg text-gray-600 leading-8">
-        CasaGlow is a modern home decor brand focused on bringing luxury,
-        elegance, and comfort into your living space. Our carefully curated
-        products are designed to transform ordinary rooms into beautiful,
-        stylish environments.
-      </p>
-    </div>
-  </section>
+    <footer class="bg-black text-gray-400 pt-16 pb-8 px-6 border-t border-gray-900">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+            <div>
+                <h3 class="text-white text-lg font-bold mb-4">SUNDORGHOR</h3>
+                <p class="text-sm leading-relaxed">আমরা আপনার ঘরকে সুন্দর ও আকর্ষণীয় করে তুলতে সবচেয়ে প্রিমিয়াম কোয়ালিটির হোম ডেকর আইটেম সরবরাহ করি।</p>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-white transition">About Us</a></li>
+                    <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-white transition">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4">Categories</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-white transition">Luxury Lighting</a></li>
+                    <li><a href="#" class="hover:text-white transition">Wall Art Decor</a></li>
+                    <li><a href="#" class="hover:text-white transition">Modern Vases</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4">Contact Info</h4>
+                <p class="text-sm mb-2"><i class="fas fa-map-marker-alt text-yellow-500 mr-2"></i> ঢাকা, বাংলাদেশ</p>
+                <p class="text-sm mb-2"><i class="fas fa-phone-alt text-yellow-500 mr-2"></i> +৮৮০ ১৭০০-০০০০০০</p>
+                <p class="text-sm"><i class="fas fa-envelope text-yellow-500 mr-2"></i> info@sundorghor.com</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto border-t border-gray-900 pt-8 flex flex-col md:flex-row items-center justify-between text-xs">
+            <p>&copy; 2026 SundorGhor. All rights reserved.</p>
+            <div class="flex gap-4 mt-4 md:mt-0 text-base">
+                <a href="#" class="hover:text-white transition"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
 
-  {/* Contact */}
-  <section id="contact" className="py-20 px-8">
-    <div className="max-w-4xl mx-auto bg-gray-100 rounded-3xl p-10 text-center">
-      <h3 className="text-4xl font-bold mb-6">Contact Us</h3>
+    <script>
+        // Categories
+        const categories = [
+            { name: "Wall Decor", icon: "fa-image" },
+            { name: "Lighting", icon: "fa-lightbulb" },
+            { name: "Luxury Vase", icon: "fa-wine-bottle" },
+            { name: "Mirror", icon: "fa-circle" },
+            { name: "Office Decor", icon: "fa-briefcase" },
+            { name: "Artificial Plant", icon: "fa-seedling" },
+            { name: "Bedroom Decor", icon: "fa-bed" },
+            { name: "Table Decor", icon: "fa-couch" }
+        ];
+        const catContainer = document.getElementById('categories-container');
+        categories.forEach(item => {
+            catContainer.innerHTML += `
+                <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition duration-300 text-center font-bold cursor-pointer border border-gray-100 hover:border-yellow-500 group">
+                    <div class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-yellow-50 group-hover:text-yellow-600 transition text-gray-500 text-lg">
+                        <i class="fas ${item.icon}"></i>
+                    </div>
+                    <span class="text-gray-800 group-hover:text-yellow-600 transition text-sm">${item.name}</span>
+                </div>
+            `;
+        });
 
-      <div className="space-y-3 text-lg text-gray-700">
-        <p>📞 Phone: +8801XXXXXXXXX</p>
-        <p>💬 WhatsApp: +8801XXXXXXXXX</p>
-        <p>📧 Email: hello@casaglow.com</p>
-        <p>📍 Bangladesh</p>
-      </div>
+        // Premium Products
+        const products = [
+            { name: "Luxury Ceramic Vase", oldPrice: "৳১,৮০০", price: "৳১,২৫০", image: "https://images.unsplash.com/photo-1578500494198-246f612d3b3d?q=80&w=600&auto=format&fit=crop", badge: "১০% OFF" },
+            { name: "Modern Nordic Pendant Light", oldPrice: "৳৪,২০০", price: "৳৩,৫০০", image: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?q=80&w=600&auto=format&fit=crop", badge: "POPULAR" },
+            { name: "Abstract Premium Wall Art", oldPrice: "৳২,৮০০", price: "৳২,foreground", image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=600&auto=format&fit=crop", badge: "BEST SELLER", priceNum: "৳২,২০০" }
+        ];
+        
+        // Quick price fix for last item
+        products[2].price = "৳২,২০০";
 
-      <button className="mt-8 bg-black text-white px-8 py-3 rounded-2xl hover:opacity-90">
-        Message Now
-      </button>
-    </div>
-  </section>
-
-  {/* Footer */}
-  <footer className="bg-black text-white py-8 text-center">
-    <h4 className="text-2xl font-bold mb-2">CasaGlow</h4>
-
-    <p className="text-gray-400 mb-4">
-      Modern Home Decor E-Commerce Website
-    </p>
-
-    <p className="text-sm text-gray-500">
-      © 2026 CasaGlow — All Rights Reserved.
-    </p>
-  </footer>
-</div>
-
-); }
+        const prodContainer = document.getElementById('products-container');
+        products.forEach(prod => {
+            prodContainer.innerHTML += `
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition duration-300 flex flex-col h-full group transform hover:-translate-y-1">
+                    <div class="relative overflow-hidden">
+                        <span class="absolute top-4 left-4 z-10 bg-red-500 text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full uppercase tracking-wider shadow-sm">${prod.badge}</span>
+                        <img src="${prod.image}" class="w-full h-72 object-cover group-hover:scale-105 transition duration-500" alt="${prod.name}">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-lg font-bold mb-2 text-gray-900 group-hover:text-yellow-600 transition">${prod.name}</h3>
+                        <div class="flex items-center gap-2 mb-5">
+                            <span class="text-yellow-600 font-black text-lg">${prod.price}</span>
+                            <span class="text-gray-400 line-through text-sm">${prod.oldPrice}</span>
+                        </div>
+                        <button class="mt-auto w-full bg-black text-white py-3.5 rounded-xl hover:bg-yellow-500 hover:text-black transition duration-300 font-semibold text-sm flex items-center justify-center gap-2 shadow-sm">
+                            <i class="fas fa-shopping-cart text-xs"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            `;
+        });
+    </script>
+</body>
+</html>
