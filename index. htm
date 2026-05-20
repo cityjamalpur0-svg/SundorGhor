@@ -1,0 +1,181 @@
+export default function CasaGlowWebsite() { const products = [ { name: "Luxury Vase", price: "৳1,250", image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop", }, { name: "Modern Wall Clock", price: "৳1,850", image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop", }, { name: "Minimal Lamp", price: "৳2,450", image: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1200&auto=format&fit=crop", }, { name: "Decor Cushion", price: "৳950", image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop", }, ];
+
+return ( <div className="bg-white text-gray-900 min-h-screen font-sans"> {/* Navbar */} <header className="flex items-center justify-between px-8 py-5 shadow-sm sticky top-0 bg-white z-50"> <h1 className="text-3xl font-bold tracking-wide">CasaGlow</h1>
+
+<nav className="hidden md:flex gap-8 text-sm font-medium">
+      <a href="#home" className="hover:text-yellow-600">Home</a>
+      <a href="#shop" className="hover:text-yellow-600">Shop</a>
+      <a href="#about" className="hover:text-yellow-600">About</a>
+      <a href="#contact" className="hover:text-yellow-600">Contact</a>
+    </nav>
+
+    <button className="bg-black text-white px-5 py-2 rounded-xl hover:opacity-90">
+      Cart
+    </button>
+  </header>
+
+  {/* Hero Section */}
+  <section
+    id="home"
+    className="relative h-[85vh] flex items-center justify-center text-center bg-cover bg-center"
+    style={{
+      backgroundImage:
+        "url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600&auto=format&fit=crop')",
+    }}
+  >
+    <div className="absolute inset-0 bg-black/50"></div>
+
+    <div className="relative z-10 text-white max-w-3xl px-4">
+      <h2 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
+        Style Your Dream Home
+      </h2>
+
+      <p className="text-lg md:text-xl mb-8 text-gray-200">
+        Premium home decor collections designed to make your space elegant and modern.
+      </p>
+
+      <div className="flex gap-4 justify-center flex-wrap">
+        <button className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-8 py-3 rounded-2xl">
+          Shop Now
+        </button>
+
+        <button className="border border-white px-8 py-3 rounded-2xl hover:bg-white hover:text-black transition">
+          Explore Collection
+        </button>
+      </div>
+    </div>
+  </section>
+
+  {/* Categories */}
+  <section className="py-20 px-8 bg-gray-50">
+    <div className="max-w-7xl mx-auto">
+      <h3 className="text-4xl font-bold text-center mb-12">
+        Featured Categories
+      </h3>
+
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        {[
+          "Wall Decor",
+          "Lighting",
+          "Luxury Vase",
+          "Mirror",
+          "Office Decor",
+          "Artificial Plant",
+          "Bedroom Decor",
+          "Table Decor",
+        ].map((item) => (
+          <div
+            key={item}
+            className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition text-center font-semibold"
+          >
+            {item}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* Products */}
+  <section id="shop" className="py-20 px-8">
+    <div className="max-w-7xl mx-auto">
+      <div className="flex items-center justify-between mb-10 flex-wrap gap-4">
+        <h3 className="text-4xl font-bold">Trending Products</h3>
+
+        <button className="border px-5 py-2 rounded-xl hover:bg-black hover:text-white transition">
+          View All
+        </button>
+      </div>
+
+      <div className="grid md:grid-cols-4 gap-8">
+        {products.map((product) => (
+          <div
+            key={product.name}
+            className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition"
+          >
+            <img
+              src={product.image}
+              alt={product.name}
+              className="h-72 w-full object-cover"
+            />
+
+            <div className="p-5">
+              <h4 className="text-xl font-semibold mb-2">
+                {product.name}
+              </h4>
+
+              <p className="text-yellow-600 font-bold text-lg mb-4">
+                {product.price}
+              </p>
+
+              <button className="w-full bg-black text-white py-3 rounded-2xl hover:opacity-90">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* Offer Banner */}
+  <section className="py-16 px-8 bg-black text-white text-center">
+    <h3 className="text-4xl font-bold mb-4">
+      Free Delivery Over ৳2000
+    </h3>
+
+    <p className="text-gray-300 text-lg mb-6">
+      Decorate your home with premium quality products.
+    </p>
+
+    <button className="bg-yellow-500 text-black px-8 py-3 rounded-2xl font-semibold hover:bg-yellow-600">
+      Shop Collection
+    </button>
+  </section>
+
+  {/* About */}
+  <section id="about" className="py-20 px-8 bg-gray-50">
+    <div className="max-w-5xl mx-auto text-center">
+      <h3 className="text-4xl font-bold mb-6">About CasaGlow</h3>
+
+      <p className="text-lg text-gray-600 leading-8">
+        CasaGlow is a modern home decor brand focused on bringing luxury,
+        elegance, and comfort into your living space. Our carefully curated
+        products are designed to transform ordinary rooms into beautiful,
+        stylish environments.
+      </p>
+    </div>
+  </section>
+
+  {/* Contact */}
+  <section id="contact" className="py-20 px-8">
+    <div className="max-w-4xl mx-auto bg-gray-100 rounded-3xl p-10 text-center">
+      <h3 className="text-4xl font-bold mb-6">Contact Us</h3>
+
+      <div className="space-y-3 text-lg text-gray-700">
+        <p>📞 Phone: +8801XXXXXXXXX</p>
+        <p>💬 WhatsApp: +8801XXXXXXXXX</p>
+        <p>📧 Email: hello@casaglow.com</p>
+        <p>📍 Bangladesh</p>
+      </div>
+
+      <button className="mt-8 bg-black text-white px-8 py-3 rounded-2xl hover:opacity-90">
+        Message Now
+      </button>
+    </div>
+  </section>
+
+  {/* Footer */}
+  <footer className="bg-black text-white py-8 text-center">
+    <h4 className="text-2xl font-bold mb-2">CasaGlow</h4>
+
+    <p className="text-gray-400 mb-4">
+      Modern Home Decor E-Commerce Website
+    </p>
+
+    <p className="text-sm text-gray-500">
+      © 2026 CasaGlow — All Rights Reserved.
+    </p>
+  </footer>
+</div>
+
+); }
